@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'companies',
     'machines',
+    'occurrences',
+    'sensors',
+    'sensor_readings',
 
 ]
 

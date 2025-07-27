@@ -146,3 +146,94 @@ DELETE  /api/machines/<id>/      → Deleta uma máquina
 #### ❌ Deletar (DELETE)
 
 **URL:** `http://localhost:8000/api/machines/1/`
+
+### ### Os end-points
+
+#### 🔗 Endpoint base da API Occurrence:
+
+```
+GET     /api/occurrences/              → Lista todas as ocorrências  
+POST    /api/occurrences/              → Cria uma nova ocorrência  
+GET     /api/occurrences/<id>/         → Detalha uma ocorrência específica  
+PUT     /api/occurrences/<id>/         → Atualiza todos os campos da ocorrência  
+PATCH   /api/occurrences/<id>/         → Atualiza parcialmente a ocorrência  
+DELETE  /api/occurrences/<id>/         → Deleta uma ocorrência  
+```
+
+> **⚠️ Importante:** O campo `sensor_reading` deve conter o ID de uma leitura existente na tabela `SensorReading`.
+
+---
+
+### 📌 Exemplo prático:
+
+#### ➕ Criar nova ocorrência (POST)
+
+**URL:** `http://localhost:8000/api/occurrences/`
+
+**JSON:**
+
+```json
+{
+  "id": 1,
+  "sensor_reading": 101,
+  "sensor_id": 5,
+  "occurrence_number": 3,
+  "anomaly_type": "Vibração Alta",
+  "severity": "Alta",
+  "description": "Níveis de vibração acima do normal detectados",
+  "status": "Aberta"
+}
+```
+
+---
+
+#### ✅ Buscar todas (GET)
+
+**URL:** `http://localhost:8000/api/occurrences/`
+
+---
+
+#### 🔍 Buscar por ID (GET)
+
+**URL:** `http://localhost:8000/api/occurrences/1/`
+
+---
+
+#### 🔁 Atualizar ocorrência (PUT)
+
+**URL:** `http://localhost:8000/api/occurrences/1/`
+
+**JSON:**
+
+```json
+{
+  "id": 1,
+  "sensor_reading": 101,
+  "sensor_id": 5,
+  "occurrence_number": 3,
+  "anomaly_type": "Temperatura Crítica",
+  "severity": "Crítica",
+  "description": "Temperatura ultrapassou limite de segurança",
+  "status": "Em análise"
+}
+```
+
+---
+
+#### 🛠 Atualizar parcialmente (PATCH)
+
+**URL:** `http://localhost:8000/api/occurrences/1/`
+
+**JSON:**
+
+```json
+{
+  "status": "Resolvida"
+}
+```
+
+---
+
+#### ❌ Deletar (DELETE)
+
+**URL:** `http://localhost:8000/api/occurrences/1/`
