@@ -5,5 +5,6 @@ urlpatterns = [
     path('', include('companies.urls')),
     path('', include('machines.urls')),
     path('', include('occurrences.urls')),
-    path('', include('sensor_readings.urls'))
+    path('', include('sensor_readings.urls')),
+    path('', include('sensors.urls')),
 ]
