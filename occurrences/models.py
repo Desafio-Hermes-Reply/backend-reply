@@ -2,7 +2,7 @@ from django.db import models
 from sensor_readings.models import SensorReading
 
 class Occurrence(models.Model):
-    id = models.IntegerField()
+    id = models.IntegerField(primary_key=True)
     sensor_reading = models.ForeignKey(SensorReading, on_delete=models.CASCADE, db_column='id_leitura')
     sensor_id = models.IntegerField()
     occurrence_number = models.IntegerField()
