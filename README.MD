@@ -56,11 +56,93 @@ DELETE  /api/companies/<id>/      → Deleta uma empresa
 
 **URL:** `http://localhost:8000/api/companies/1/`
 
-### Machines
+#### 🔗 Endpoint base da API Machine:
 
-* `GET /api/machines/` — lista máquinas
-* `POST /api/machines/` — cria máquina
-* `GET /api/machines/{id}/` — detalhes de máquina
-* `PUT /api/machines/{id}/` — atualiza máquina
-* `PATCH /api/machines/{id}/` — atualiza parcialmente
-* `DELETE /api/machines/{id}/` — deleta máquina
+```
+GET     /api/machines/           → Lista todas as máquinas  
+POST    /api/machines/           → Cria uma nova máquina  
+GET     /api/machines/<id>/      → Detalha uma máquina específica  
+PUT     /api/machines/<id>/      → Atualiza todos os campos da máquina  
+PATCH   /api/machines/<id>/      → Atualiza parcialmente a máquina  
+DELETE  /api/machines/<id>/      → Deleta uma máquina  
+```
+
+---
+
+### 📌 Exemplo prático:
+
+#### ➕ Criar nova máquina (POST)
+
+**URL:** `http://localhost:8000/api/machines/`
+
+**JSON:**
+
+```json
+{
+  "id": 1,
+  "name": "Compressor de Ar 500L",
+  "serial_number": "ABC123456789",
+  "model": "Model X500",
+  "manufacturer": "AirTech",
+  "location": "Setor 1 - Galpão A",
+  "installation_date": "2023-07-15",
+  "status": "Operando",
+  "last_maintenance": "2024-01-10",
+  "next_maintenance": "2024-07-10"
+}
+```
+
+---
+
+#### ✅ Buscar todas (GET)
+
+**URL:** `http://localhost:8000/api/machines/`
+
+---
+
+#### 🔍 Buscar por ID (GET)
+
+**URL:** `http://localhost:8000/api/machines/1/`
+
+---
+
+#### 🔁 Atualizar máquina (PUT)
+
+**URL:** `http://localhost:8000/api/machines/1/`
+
+**JSON:**
+
+```json
+{
+  "id": 1,
+  "name": "Compressor de Ar 500L",
+  "serial_number": "ABC123456789",
+  "model": "Model X600",
+  "manufacturer": "AirTech",
+  "location": "Setor 2 - Galpão B",
+  "installation_date": "2023-07-15",
+  "status": "Parado",
+  "last_maintenance": "2024-01-10",
+  "next_maintenance": "2024-12-10"
+}
+```
+
+---
+
+#### 🛠 Atualizar parcialmente (PATCH)
+
+**URL:** `http://localhost:8000/api/machines/1/`
+
+**JSON:**
+
+```json
+{
+  "status": "Em manutenção"
+}
+```
+
+---
+
+#### ❌ Deletar (DELETE)
+
+**URL:** `http://localhost:8000/api/machines/1/`
