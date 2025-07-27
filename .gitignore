@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+static/
+*.mo
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# pip
+pip-log.txt
+
+# pyenv
+.python-version
+
+# pytest
+.cache
+.pytest_cache/
+
+# coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# dotenv
+.env
+*.env
+
+# Swagger/OpenAPI generated
+swagger.json
+swagger.yaml
+
+# System files
+Thumbs.db
+ehthumbs.db
+
+# JetBrains IDEs
+.idea/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
